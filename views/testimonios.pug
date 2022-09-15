@@ -1,0 +1,27 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5 
+        h2.text-center.mt-5.mb-5 #{pagina} 
+        
+        include ./layout/bloque_testimonios    
+
+        .row
+            .col-md-12
+                if(errores)
+                    each error in errores
+                        .alert.col.alert-danger.text-center= error.mensaje
+
+            .row.justify-content-center.col     
+                .col-md-8 
+                    form(action="" method="POST")
+                        .form-group
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text" , placeholder="Tu Nombre",value=nombre, name="nombre", class="form-control")
+                        .form-group 
+                            label(for="email") Email 
+                            input#email(type="email" , placeholder="Tu Email",value=email, name="email", class="form-control")
+                        .form-group 
+                            label(for="mensaje") Opinion 
+                            textarea#mensaje(class="form-control", name="mensaje",placeholder="Tu opinión" col="9" rows="3")= mensaje 
+                        input.btn.btn-success.btn-block(type="submit")    

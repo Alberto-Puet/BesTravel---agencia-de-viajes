@@ -1,0 +1,32 @@
+extends ./layout/index
+
+block slider
+    .slider 
+        h1 MIAMI
+        em.mb-5 vacaciones
+
+block contenido
+    main.container.mt-5 
+        h2.text-center.mb-5 Sobre nosotros 
+        .row.mb-5 
+            .col-md-6
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean felis sapien, molestie in metus vitae, mollis laoreet est. Nullam dapibus, tellus non volutpat vulputate, nibh quam molestie odio, at bibendum magna mauris non massa. Aliquam justo ex, porta ut urna sit amet, fermentum eleifend lorem. Aliquam erat volutpat. 
+                p Curabitur commodo, augue eget bibendum facilisis, dui ipsum porttitor enim, eget scelerisque mi dolor sed tortor. Suspendisse placerat quam eros, sed placerat eros pretium eu. 
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid radius")
+
+        include ./layout/bloque_viajes   
+         
+    .descuento.mt-5 
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido
+                        h3 10% de Descuento 
+                        p.titulo Viaje a Egipto 
+                        p.fecha 15 de Enero de 2023 - 1 de Febrero de 2023
+                        p.precio $3.000 USD
+
+    .container 
+        h2.mt-5.mb-5.text-center 
+        include ./layout/bloque_testimonios                   

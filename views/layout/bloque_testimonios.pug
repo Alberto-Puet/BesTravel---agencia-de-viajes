@@ -1,0 +1,10 @@
+blockquote.text-center.titulo-testimonio Opiniones de nuestros clientes
+.row.mb-5 
+    each testimonio in testimonios
+        .col-md-6.col-lg-4.mb-4     
+            .card.radius 
+                .card-body
+                    p.mb-0 
+                        |#{testimonio.mensaje}
+                    footer.blockquote-footer 
+                        |#{testimonio.nombre}
